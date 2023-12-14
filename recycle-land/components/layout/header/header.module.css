@@ -1,0 +1,18 @@
+.header {
+  height: 88px;
+  padding: 1.75rem 5% 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-transform: uppercase;
+  color: white !important;
+  font-size: 0.85rem;
+  transform: all 0.3s easy-in-out;
+}
+
+.link:hover {
+  color: #93ce20 !important;
+}

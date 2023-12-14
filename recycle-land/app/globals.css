@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #009b20;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 43px;
+  color: #1e1d24;
+}
+
+.section-description {
+  color: #1e1d24;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 23px;
+  margin: 0% 12% 0% 12%;
+}
+
+.leaflet-attribution-flag {
+  display: none !important;
+}
+
+.leaflet-attribution-flag {
+  visibility: hidden !important;
+  position: absolute;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  background-color: black !important;
+  opacity: 0.8 !important;
+}
+
+.swiper-pagination-bullet-active-prev {
+  transform: scale(0.75) !important;
+}
+.swiper-pagination-bullet-active-next {
+  transform: scale(0.75) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #024731 !important;
+}
+
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+.Toastify__toast--success {
+  background: #dedede !important;
+  color: black !important;
+}

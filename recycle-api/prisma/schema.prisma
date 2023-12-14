@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id() @unique() @default(autoincrement())
+  name     String
+  email    String @unique()
+  password String
+}
+
+model Partner {
+  id               Int                @id() @unique() @default(autoincrement())
+  website          String?            @default("")
+  image            String?            @default("")
+  name             String
+  lat              Float
+  long             Float
+  contact_person   String
+  contact_phone    String
+  address          String
+  inn              String
+  PartnerMaterials PartnerMaterials[]
+  is_active        Boolean            @default(true)
+}
+
+model Request {
+  id             Int     @id() @unique() @default(autoincrement())
+  inn            String
+  contact_person String
+  contact_phone  String
+  is_active      Boolean @default(true)
+  is_accept      Boolean @default(false)
+}
+
+model Material {
+  id               Int                @id() @unique() @default(autoincrement())
+  name             String
+  color            String             @default("black")
+  icon             String
+  PartnerMaterials PartnerMaterials[]
+}
+
+model PartnerMaterials {
+  id          Int      @id() @unique() @default(autoincrement())
+  partner     Partner  @relation(fields: [partner_id], references: [id])
+  partner_id  Int
+  material    Material @relation(fields: [material_id], references: [id])
+  material_id Int
+}
+
+model City {
+  id          Int    @id() @unique() @default(autoincrement())
+  name        String @unique()
+  north_lat   Float
+  north_long  Float
+  east_lat    Float
+  east_long   Float
+  center_lat  Float
+  center_long Float
+}

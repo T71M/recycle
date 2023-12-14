@@ -1,0 +1,32 @@
+.icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s;
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.description {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}

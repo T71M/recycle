@@ -1,0 +1,46 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  flex: 1;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1e1d24;
+}
+
+.description {
+  width: 80%;
+  word-break: break-word;
+  font-size: 0.875rem;
+  color: #79787f;
+  font-weight: 400;
+}
+
+.image {
+  margin: 2rem 0;
+  width: 350px;
+  height: 270px;
+  transition: all 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.01);
+}
+
+.link {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #396204;
+}
+
+.link:hover {
+  color: #60a605;
+}
